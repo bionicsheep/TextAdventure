@@ -136,7 +136,7 @@ public class DefaultResponder {
         return count;
     }
 
-    //DONE
+    // DONE
     public String getMoveResponse(String direction) {
         // DEBUG
         Room currentRoom = world.getRoom(world.getLocation());
@@ -165,7 +165,7 @@ public class DefaultResponder {
         }
     }
 
-    //DONE
+    // DONE
     public String getInventoryResponse() {
         // DEBUG
         System.out.println("getting INVENTORY response");
@@ -179,10 +179,9 @@ public class DefaultResponder {
         }
     }
 
+    // DONE
     public String getDisplayRoomResponse() {
-        // DEBUG
-        System.out.println("getting DISPLAYROOM response");
-        return "";
+        return world.printAllRoomObjects(world.getLocation());
     }
 
     // DONE
@@ -204,8 +203,10 @@ public class DefaultResponder {
                     Door door = (Door) world.getThing(noun);
                     // if you have the key
                     if (world.getInventory().contains(door.key)) {
-                        world.getThing(noun).properties.remove("locked");
-                        world.getThing(noun).properties.add("open");
+                        door.properties.remove("locked");
+                        door.properties.add("open");
+                        //opens twin
+                        world.getThing(door.twin).properties.add("open");
                         return "You unlock the " + noun + " and open it. ";
                     } // if you don't have the key
                     else {
@@ -311,7 +312,8 @@ public class DefaultResponder {
     private String printList(List<String> list) {
         return "";
     }
-
+    
+    // DONE
     private String listToSentence(List<String> items) {
         StringBuilder sb = new StringBuilder();
         List<String> tempList = items;
@@ -341,5 +343,4 @@ public class DefaultResponder {
 
         return sb.toString();
     }
-
 }
