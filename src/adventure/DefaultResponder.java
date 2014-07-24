@@ -38,7 +38,8 @@ public class DefaultResponder {
                     return getMoveResponse(verb);
                 }
             }
-        } // type 2 verbs
+        }
+        // type 2 verbs
         else if (verbs2.contains(verb)) {
             if (wordCount < 2) {
                 return "The verb " + verb + " must be used with a noun.";
@@ -70,7 +71,8 @@ public class DefaultResponder {
                     }
                 }
             }
-        } //unknown verb
+        }
+        //unknown verb
         else {
             return "I do not understand the verb: " + verb + ".";
         }
@@ -81,15 +83,9 @@ public class DefaultResponder {
     private String getNoun(String nounWord, Boolean mustBeVisible) {
         List<String> items;
         if (mustBeVisible) {
-            //DEBUG
-            System.out.println("getting only visible room objects");
             items = world.getAllVisibleRoomObjects(world.getLocation());
-            System.out.println(items);
         } else {
-            //DEBUG
-            System.out.println("getting all room objects");
             items = world.getAllRoomObjects(world.getLocation());
-            System.out.println(items);
         }
         for (int i = 0; i < items.size(); i++) {
             if ((world.getThing(items.get(i)).noun.equals(nounWord))) {
@@ -106,8 +102,6 @@ public class DefaultResponder {
                 temp = command.substring(0, i);
             }
         }
-        // DEBUG
-        System.out.println("verb is " + temp + " length: " + temp.length());
         return temp;
     }
 
@@ -118,8 +112,6 @@ public class DefaultResponder {
                 temp = command.substring(i + 1, command.length());
             }
         }
-        // DEBUG
-        System.out.println("noun is " + temp + " length: " + temp.length());
         return temp;
     }
 
@@ -138,7 +130,6 @@ public class DefaultResponder {
 
     // DONE
     public String getMoveResponse(String direction) {
-        // DEBUG
         Room currentRoom = world.getRoom(world.getLocation());
         // if direction is viable
         if(currentRoom.destinations.containsKey(direction)){
@@ -167,8 +158,6 @@ public class DefaultResponder {
 
     // DONE
     public String getInventoryResponse() {
-        // DEBUG
-        System.out.println("getting INVENTORY response");
         // if packing items
         if(world.getInventory().size() > 0){
             return "You are carrying " + listToSentence(world.getInventory()) + ". ";

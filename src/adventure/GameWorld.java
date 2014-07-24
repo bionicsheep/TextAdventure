@@ -141,8 +141,6 @@ public class GameWorld {
         for (String child : (roomMap.get(room).children)) {
             temp.addAll(getVisibleDescendents(child));
         }
-
-        System.out.println("inventory " + inventory);
         temp.addAll(inventory); //inventory is always in scope
 
         return temp;
@@ -153,11 +151,8 @@ public class GameWorld {
         for (String child : (roomMap.get(room).children)) {
             temp.addAll(getDescendents(child));
         }
-
         temp.addAll(inventory); //inventory is always in scope
-
-        return temp;
-    }
+        return temp;    }
 
     public List<String> getDescendents(String name) {
         List<String> temp = new ArrayList();

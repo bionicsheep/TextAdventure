@@ -32,7 +32,6 @@ public class GameEngine {
     }
 
     private String getRoomDescription() {
-        System.out.println("At error: " + world.getLocation());
         return world.getRoom(world.getLocation()).description;
     }
 }

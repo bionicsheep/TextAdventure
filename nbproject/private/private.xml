@@ -2,16 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/aless_000/Documents/NetBeansProjects/Project%203/src/adventure/GameWorld.java</file>
-            <file>file:/C:/Users/aless_000/Documents/NetBeansProjects/Project%203/src/adventure/DefaultResponder.java</file>
-            <file>file:/C:/Users/aless_000/Documents/NetBeansProjects/Project%203/src/adventure/AdventureGUI.java</file>
-            <file>file:/C:/Users/aless_000/Documents/NetBeansProjects/Project%203/src/adventure/Door.java</file>
-            <file>file:/C:/Users/aless_000/Documents/NetBeansProjects/Project%203/src/adventure/MyGame.java</file>
-            <file>file:/C:/Users/aless_000/Documents/NetBeansProjects/Project%203/src/adventure/Thing.java</file>
-            <file>file:/C:/Users/aless_000/Documents/NetBeansProjects/Project%203/src/adventure/Responder.java</file>
-            <file>file:/C:/Users/aless_000/Documents/NetBeansProjects/Project%203/src/adventure/GameEngine.java</file>
-            <file>file:/C:/Users/aless_000/Documents/NetBeansProjects/Project%203/src/adventure/Room.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
